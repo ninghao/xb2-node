@@ -1,6 +1,8 @@
 const http = require('http');
 
 const server = http.createServer((request, response) => {
+  console.log(request.headers['user-agent']);
+
   response.write('hello ~');
   response.end();
 });
