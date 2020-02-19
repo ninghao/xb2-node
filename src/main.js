@@ -3,7 +3,10 @@ const http = require('http');
 const server = http.createServer((request, response) => {
   console.log(request.headers['user-agent']);
 
-  response.write('hello ~');
+  response.writeHead(200, {
+    'Content-Type': 'text/html',
+  });
+  response.write(`<input />`);
   response.end();
 });
 
