@@ -27,3 +27,7 @@ const data = [
     content: '日出江花红胜火，春来江水绿如蓝'
   }
 ];
+
+app.get('/posts', (request, response) => {
+  response.send(data);
+});
