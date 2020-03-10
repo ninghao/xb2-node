@@ -2,5 +2,8 @@
   "name": "xb2-node",
   "version": "1.0.0",
   "description": "《小白兔的开发之路》演示项目",
-  "author": "wanghao <wanghao@ninghao.net>"
+  "author": "wanghao <wanghao@ninghao.net>",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
