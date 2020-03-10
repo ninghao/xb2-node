@@ -31,3 +31,14 @@ const data = [
 app.get('/posts', (request, response) => {
   response.send(data);
 });
+
+app.get('/posts/:postId', (request, response) => {
+  // 获取内容 ID
+  const { postId } = request.params;
+
+  // 查找具体内容
+  const posts = data.filter(item => item.id == postId);
+
+  // 作出响应
+  response.send(posts[0]);
+});
