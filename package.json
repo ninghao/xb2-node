@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "description": "《小白兔的开发之路》演示项目",
   "author": "wanghao <wanghao@ninghao.net>",
+  "scripts": {
+    "start:dev": "tsc-watch --onSuccess \"node dist/main.js\"",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.3",
     "@types/node": "^13.9.1",
+    "prettier": "1.19.1",
+    "tsc-watch": "^4.2.3",
     "typescript": "^3.8.3"
   }
 }
