@@ -58,6 +58,9 @@ app.post('/posts', (request, response) => {
   // 设置响应状态码
   response.status(201);
 
+  // 输出请求头部数据
+  console.log(request.headers['sing-along']);
+
   // 作出响应
   response.send({
     message: `成功创建了内容：${content}`
