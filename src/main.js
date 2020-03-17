@@ -55,6 +55,9 @@ app.post('/posts', (request, response) => {
   // 获取请求里的数据
   const { content } = request.body;
 
+  // 设置响应状态码
+  response.status(201);
+
   // 作出响应
   response.send({
     message: `成功创建了内容：${content}`
