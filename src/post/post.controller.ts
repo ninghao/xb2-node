@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
+import { getPosts } from './post.service';
 
 /**
  * 内容列表
@@ -8,5 +9,7 @@ export const index = (
   response: Response,
   next: NextFunction
 ) => {
-  response.send('内容列表接口');
+  const posts = getPosts();
+
+  response.send(posts);
 };
