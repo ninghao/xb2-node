@@ -9,7 +9,10 @@ export const index = async (
   response: Response,
   next: NextFunction
 ) => {
-  const posts = await getPosts();
-
-  response.send(posts);
+  try {
+    const posts = await getPosts();
+    response.send(posts);
+  } catch (error) {
+    next(error);
+  }
 };
