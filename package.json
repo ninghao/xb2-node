@@ -8,11 +8,13 @@
     "format": "prettier --write \"src/**/*.ts\""
   },
   "dependencies": {
+    "bcrypt": "^4.0.1",
     "express": "^4.17.1",
     "lodash": "^4.17.15",
     "mysql2": "^2.1.0"
   },
   "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
     "@types/express": "^4.17.3",
     "@types/lodash": "^4.14.149",
     "@types/mysql2": "github:types/mysql2",
