@@ -6,7 +6,7 @@ import { Request, Response, NextFunction } from 'express';
 export const requestUrl = (
   request: Request,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   console.log(request.url);
   next();
@@ -19,7 +19,7 @@ export const defaultErrorHandler = (
   error: any,
   request: Request,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   if (error.message) {
     console.log('🚧', error.message);
@@ -46,6 +46,10 @@ export const defaultErrorHandler = (
     case 'USER_DOES_NOT_EXIST':
       statusCode = 400;
       message = '用户不存在';
+      break;
+    case 'PASSWORD_DOES_NOT_MATCH':
+      statusCode = 400;
+      message = '密码不对';
       break;
     default:
       statusCode = 500;
