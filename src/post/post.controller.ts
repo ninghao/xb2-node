@@ -8,7 +8,7 @@ import { getPosts, createPost, updatePost, deletePost } from './post.service';
 export const index = async (
   request: Request,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   try {
     const posts = await getPosts();
@@ -24,14 +24,15 @@ export const index = async (
 export const store = async (
   request: Request,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   // 准备数据
   const { title, content } = request.body;
+  const { id: userId } = request.user;
 
   // 创建内容
   try {
-    const data = await createPost({ title, content });
+    const data = await createPost({ title, content, userId });
     response.status(201).send(data);
   } catch (error) {
     next(error);
@@ -44,7 +45,7 @@ export const store = async (
 export const update = async (
   request: Request,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   // 获取内容 ID
   const { postId } = request.params;
@@ -67,7 +68,7 @@ export const update = async (
 export const destroy = async (
   request: Request,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   // 获取内容 ID
   const { postId } = request.params;
