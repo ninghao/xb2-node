@@ -13,11 +13,7 @@
     "baseUrl": "./",
     "incremental": true
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"],
+  "files": ["types/express.d.ts"]
 }
