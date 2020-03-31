@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import { PRIVATE_KEY } from '../app/app.config';
 
 /**
- * 签发信息
+ * 签发令牌
  */
 interface SignTokenOptions {
   payload?: any;

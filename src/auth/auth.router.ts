@@ -10,7 +10,7 @@ const router = express.Router();
 router.post('/login', validateLoginData, authController.login);
 
 /**
- * 定义验证登录接口
+ * 验证登录
  */
 router.post('/auth/validate', authGuard, authController.validate);
 
