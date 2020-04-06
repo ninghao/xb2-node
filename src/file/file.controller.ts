@@ -30,6 +30,7 @@ export const store = async (
       ...fileInfo,
       userId,
       postId,
+      ...request.fileMetaData,
     });
 
     // 做出响应
