@@ -79,7 +79,7 @@ export const serve = async (
         path.join(root, resized, `${filename}-${size}`),
       );
 
-      // 设备文件名与目录
+      // 设置文件名与目录
       if (fileExist) {
         filename = `${filename}-${size}`;
         root = path.join(root, resized);
