@@ -1,5 +1,9 @@
 import { Request, Response, NextFunction } from 'express';
-import { createComment, isReplyComment } from './comment.service';
+import {
+  createComment,
+  isReplyComment,
+  updateComment,
+} from './comment.service';
 
 /**
  * 发表评论
@@ -65,6 +69,34 @@ export const reply = async (
 
     // 做出响应
     response.status(201).send(data);
+  } catch (error) {
+    next(error);
+  }
+};
+
+/**
+ * 修改评论
+ */
+export const update = async (
+  request: Request,
+  response: Response,
+  next: NextFunction,
+) => {
+  // 准备数据
+  const { commentId } = request.params;
+  const { content } = request.body;
+
+  const comment = {
+    id: parseInt(commentId, 10),
+    content,
+  };
+
+  try {
+    // 修改评论
+    const data = await updateComment(comment);
+
+    // 做出响应
+    response.send(data);
   } catch (error) {
     next(error);
   }
