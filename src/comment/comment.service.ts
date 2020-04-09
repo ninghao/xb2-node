@@ -55,3 +55,20 @@ export const updateComment = async (comment: CommentModel) => {
   // 提供数据
   return data;
 };
+
+/**
+ * 删除评论
+ */
+export const deleteComment = async (commentId: number) => {
+  // 准备查询
+  const statement = `
+    DELETE FROM comment
+    WHERE id = ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, commentId);
+
+  // 提供数据
+  return data;
+};
