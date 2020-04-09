@@ -25,6 +25,16 @@ router.patch(
 );
 
 /**
+ * 删除评论
+ */
+router.delete(
+  '/comments/:commentId',
+  authGuard,
+  accessControl({ possession: true }),
+  commentController.destroy,
+);
+
+/**
  * 导出路由
  */
 export default router;
