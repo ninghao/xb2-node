@@ -11,7 +11,8 @@ export const getPosts = async () => {
       post.id,
       post.title,
       post.content,
-      ${sqlFragment.user}
+      ${sqlFragment.user},
+      ${sqlFragment.totalComments}
     FROM post
     ${sqlFragment.leftJoinUser}
   `;
