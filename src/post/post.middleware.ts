@@ -36,3 +36,42 @@ export const sort = async (
   // 下一步
   next();
 };
+
+/**
+ * 过滤列表
+ */
+export const filter = async (
+  request: Request,
+  response: Response,
+  next: NextFunction,
+) => {
+  // 解构查询符
+  const { tag, user, action } = request.query;
+
+  // 设置默认的过滤
+  request.filter = {
+    name: 'default',
+    sql: 'post.id IS NOT NULL',
+  };
+
+  // 按标签名过滤
+  if (tag && !user && !action) {
+    request.filter = {
+      name: 'tagName',
+      sql: 'tag.name = ?',
+      param: tag,
+    };
+  }
+
+  // 过滤出用户发布的内容
+  if (user && action == 'published' && !tag) {
+    request.filter = {
+      name: 'userPublished',
+      sql: 'user.id = ?',
+      param: user,
+    };
+  }
+
+  // 下一步
+  next();
+};
