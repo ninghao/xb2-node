@@ -5,12 +5,27 @@ import { sqlFragment } from './post.provider';
 /**
  * 获取内容列表
  */
+export interface GetPostsOptionsFilter {
+  name: string;
+  sql?: string;
+  param?: string;
+}
+
 interface GetPostsOptions {
   sort?: string;
+  filter?: GetPostsOptionsFilter;
 }
 
 export const getPosts = async (options: GetPostsOptions) => {
-  const { sort } = options;
+  const { sort, filter } = options;
+
+  // SQL 参数
+  let params: Array<any> = [];
+
+  // 设置 SQL 参数
+  if (filter.param) {
+    params = [filter.param, ...params];
+  }
 
   const statement = `
     SELECT
@@ -25,11 +40,12 @@ export const getPosts = async (options: GetPostsOptions) => {
     ${sqlFragment.leftJoinUser}
     ${sqlFragment.leftJoinOneFile}
     ${sqlFragment.leftJoinTag}
+    WHERE ${filter.sql}
     GROUP BY post.id
     ORDER BY ${sort}
   `;
 
-  const [data] = await connection.promise().query(statement);
+  const [data] = await connection.promise().query(statement, params);
 
   return data;
 };
