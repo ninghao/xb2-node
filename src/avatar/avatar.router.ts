@@ -17,6 +17,11 @@ router.post(
 );
 
 /**
+ * 头像服务
+ */
+router.get('/users/:userId/avatar', avatarController.serve);
+
+/**
  * 导出路由
  */
 export default router;
