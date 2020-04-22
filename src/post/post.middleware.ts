@@ -73,7 +73,7 @@ export const filter = async (
     };
   }
 
-  // 过滤出用户选赞过的内容
+  // 过滤出用户赞过的内容
   if (user && action == 'liked' && !tag) {
     request.filter = {
       name: 'userLiked',
