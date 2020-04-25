@@ -1,6 +1,7 @@
 import { connection } from '../app/database/mysql';
 import { CommentModel } from './comment.model';
 import { sqlFragment } from './comment.provider';
+import { GetPostsOptionsFilter } from '../post/post.service';
 
 /**
  * 创建评论
@@ -77,9 +78,21 @@ export const deleteComment = async (commentId: number) => {
 /**
  * 获取评论列表
  */
-export const getComments = async () => {
+interface GetCommentOptions {
+  filter?: GetPostsOptionsFilter;
+}
+
+export const getComments = async (options: GetCommentOptions) => {
+  // 解构选择
+  const { filter } = options;
+
   // SQL 参数
   let params: Array<any> = [];
+
+  // 设置 SQL 参数
+  if (filter.param) {
+    params = [filter.param, ...params];
+  }
 
   // 准备查询
   const statement = `
@@ -92,6 +105,8 @@ export const getComments = async () => {
       comment
     ${sqlFragment.leftJoinUser}
     ${sqlFragment.leftJoinPost}
+    WHERE
+      ${filter.sql}
     GROUP BY
       comment.id
     ORDER BY
