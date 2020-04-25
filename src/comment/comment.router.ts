@@ -35,6 +35,11 @@ router.delete(
 );
 
 /**
+ * 评论列表
+ */
+router.get('/comments', commentController.index);
+
+/**
  * 导出路由
  */
 export default router;
