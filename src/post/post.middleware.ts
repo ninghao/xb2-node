@@ -1,5 +1,4 @@
 import { Request, Response, NextFunction } from 'express';
-import { POSTS_PER_PAGE } from '../app/app.config';
 
 /**
  * 排序方式
@@ -89,23 +88,21 @@ export const filter = async (
 /**
  * 内容分页
  */
-export const paginate = async (
-  request: Request,
-  response: Response,
-  next: NextFunction,
-) => {
-  // 当前页码
-  const { page = 1 } = request.query;
+export const paginate = (itemsPerPage: number) => {
+  return async (request: Request, response: Response, next: NextFunction) => {
+    // 当前页码
+    const { page = 1 } = request.query;
 
-  // 每页内容数量
-  const limit = parseInt(POSTS_PER_PAGE, 10) || 30;
+    // 每页内容数量
+    const limit = itemsPerPage || 30;
 
-  // 计算出偏移量
-  const offset = limit * (page - 1);
+    // 计算出偏移量
+    const offset = limit * (page - 1);
 
-  // 设置请求中的分页
-  request.pagination = { limit, offset };
+    // 设置请求中的分页
+    request.pagination = { limit, offset };
 
-  // 下一步
-  next();
+    // 下一步
+    next();
+  };
 };
