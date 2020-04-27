@@ -1,7 +1,10 @@
 import { connection } from '../app/database/mysql';
 import { CommentModel } from './comment.model';
 import { sqlFragment } from './comment.provider';
-import { GetPostsOptionsFilter } from '../post/post.service';
+import {
+  GetPostsOptionsFilter,
+  GetPostsOptionsPagination,
+} from '../post/post.service';
 
 /**
  * 创建评论
@@ -80,14 +83,18 @@ export const deleteComment = async (commentId: number) => {
  */
 interface GetCommentOptions {
   filter?: GetPostsOptionsFilter;
+  pagination?: GetPostsOptionsPagination;
 }
 
 export const getComments = async (options: GetCommentOptions) => {
   // 解构选择
-  const { filter } = options;
+  const {
+    filter,
+    pagination: { limit, offset },
+  } = options;
 
   // SQL 参数
-  let params: Array<any> = [];
+  let params: Array<any> = [limit, offset];
 
   // 设置 SQL 参数
   if (filter.param) {
@@ -113,6 +120,8 @@ export const getComments = async (options: GetCommentOptions) => {
       comment.id
     ORDER BY
       comment.id DESC
+    LIMIT ?
+    OFFSET ?
   `;
 
   // 执行查询

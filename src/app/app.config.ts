@@ -29,3 +29,8 @@ PUBLIC_KEY = Buffer.from(PUBLIC_KEY, 'base64').toString();
  * 内容分页
  */
 export const POSTS_PER_PAGE = parseInt(process.env['POSTS_PER_PAGE'], 10);
+
+/**
+ * 评论分页
+ */
+export const COMMENTS_PER_PAGE = parseInt(process.env['COMMENTS_PER_PAGE'], 10);
