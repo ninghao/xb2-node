@@ -87,7 +87,7 @@ interface GetCommentsOptions {
 }
 
 export const getComments = async (options: GetCommentsOptions) => {
-  // 解构选择
+  // 解构选项
   const {
     filter,
     pagination: { limit, offset },
