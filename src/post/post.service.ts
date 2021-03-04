@@ -62,7 +62,7 @@ export const getPosts = async (options: GetPostsOptions) => {
       ) AS liked
     FROM post
     ${sqlFragment.leftJoinUser}
-    ${sqlFragment.leftJoinOneFile}
+    ${sqlFragment.innerJoinOneFile}
     ${sqlFragment.leftJoinTag}
     ${filter.name == 'userLiked' ? sqlFragment.innerJoinUserLikePost : ''}
     WHERE ${filter.sql}
@@ -195,7 +195,7 @@ export const getPostsTotalCount = async (options: GetPostsOptions) => {
       COUNT(DISTINCT post.id) AS total
     FROM post
     ${sqlFragment.leftJoinUser}
-    ${sqlFragment.leftJoinOneFile}
+    ${sqlFragment.innerJoinFile}
     ${sqlFragment.leftJoinTag}
     ${filter.name == 'userLiked' ? sqlFragment.innerJoinUserLikePost : ''}
     WHERE ${filter.sql}
