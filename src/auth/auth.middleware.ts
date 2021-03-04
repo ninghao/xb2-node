@@ -48,28 +48,48 @@ export const authGuard = (
 ) => {
   console.log('👮🏼‍♀️ 验证用户身份');
 
+  if (request.user.id) {
+    next();
+  } else {
+    next(new Error('UNAUTHORIZED'));
+  }
+};
+
+/**
+ * 当前用户
+ */
+export const currentUser = (
+  request: Request,
+  response: Response,
+  next: NextFunction,
+) => {
+  let user: TokenPayload = {
+    // 未登录的用户
+    id: null,
+    name: 'anonymous',
+  };
+
   try {
     // 提取 Authorization
     const authorization = request.header('Authorization');
-    if (!authorization) throw new Error();
 
     // 提取 JWT 令牌
     const token = authorization.replace('Bearer ', '');
-    if (!token) throw new Error();
 
-    // 验证令牌
-    const decoded = jwt.verify(token, PUBLIC_KEY, {
-      algorithms: ['RS256'],
-    });
+    if (token) {
+      // 验证令牌
+      const decoded = jwt.verify(token, PUBLIC_KEY, {
+        algorithms: ['RS256'],
+      });
 
-    // 在请求里添加当前用户
-    request.user = decoded as TokenPayload;
+      user = decoded as TokenPayload;
+    }
+  } catch (error) {}
 
-    // 下一步
-    next();
-  } catch (error) {
-    next(new Error('UNAUTHORIZED'));
-  }
+  // 在请求里添加当前用户
+  request.user = user;
+
+  next();
 };
 
 /**
