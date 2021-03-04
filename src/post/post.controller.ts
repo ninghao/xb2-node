@@ -37,6 +37,7 @@ export const index = async (
       sort: request.sort,
       filter: request.filter,
       pagination: request.pagination,
+      currentUser: request.user,
     });
     response.send(posts);
   } catch (error) {
