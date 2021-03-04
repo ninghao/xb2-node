@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "bcrypt": "^4.0.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "jimp": "^0.10.0",
     "jsonwebtoken": "^8.5.1",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@types/bcrypt": "^3.0.0",
+    "@types/cors": "^2.8.10",
     "@types/express": "^4.17.3",
     "@types/jest": "^25.2.1",
     "@types/jsonwebtoken": "^8.3.8",
