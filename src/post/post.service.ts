@@ -211,7 +211,18 @@ export const getPostsTotalCount = async (options: GetPostsOptions) => {
 /**
  * 按 ID 调取内容
  */
-export const getPostById = async (postId: number) => {
+export interface GetPostByIdOptions {
+  currentUser?: TokenPayload;
+}
+
+export const getPostById = async (
+  postId: number,
+  options: GetPostByIdOptions = {},
+) => {
+  const {
+    currentUser: { id: userId },
+  } = options;
+
   // 准备查询
   const statement = `
     SELECT
@@ -222,7 +233,14 @@ export const getPostById = async (postId: number) => {
       ${sqlFragment.totalComments},
       ${sqlFragment.file},
       ${sqlFragment.tags},
-      ${sqlFragment.totalLikes}
+      ${sqlFragment.totalLikes},
+      (
+        SELECT COUNT(user_like_post.postId)
+        FROM user_like_post
+        WHERE
+          user_like_post.postId = post.id
+          && user_like_post.userId = ${userId}
+      ) AS liked
     FROM post
     ${sqlFragment.leftJoinUser}
     ${sqlFragment.leftJoinOneFile}

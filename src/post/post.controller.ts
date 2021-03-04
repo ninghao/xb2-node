@@ -193,7 +193,9 @@ export const show = async (
 
   // 调取内容
   try {
-    const post = await getPostById(parseInt(postId, 10));
+    const post = await getPostById(parseInt(postId, 10), {
+      currentUser: request.user,
+    });
 
     // 做出响应
     response.send(post);
