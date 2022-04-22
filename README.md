@@ -44,9 +44,9 @@ PUBLIC_KEY=LS0tLS1CRUd
 
 ## 准备数据
 
-- [coding.net 仓库: xb2-node-assets](https://e.coding.net/ninghao/xb2/xb2-node-assets.git)
-- [github 仓库: xb2-node-assets](https://github.com/ninghao/xb2-node-assets.git)
-- [百度网盘: xb2-node-assets](https://pan.baidu.com/s/18ICmhWa_MoRIM2lEPvCBCw?pwd=5xxc) 
+- xb2-node-assets（coding.net 仓库）：https://e.coding.net/ninghao/xb2/xb2-node-assets.git
+- xb2-node-assets（github 仓库）：https://github.com/ninghao/xb2-node-assets.git
+- xb2-node-assets（百度网盘）：https://pan.baidu.com/s/18ICmhWa_MoRIM2lEPvCBCw?pwd=5xxc
 
 ### 1：新建一个数据仓库
 
