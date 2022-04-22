@@ -1,5 +1,5 @@
 import request from 'supertest';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import app from '../app';
 import { connection } from '../app/database/mysql';
 import { signToken } from '../auth/auth.service';
