@@ -56,6 +56,8 @@ PUBLIC_KEY=LS0tLS1CRUd
 
 在之前创建的 xb2_node 数据仓库里，导入在 xb2-node-assets 里面的 database/xb2_node.sql 这个文件。这样这个 xb2_node 数据仓库里会出现应用需要的数据表，数据表里面会有一些演示数据。
 
+![tableplus](https://raw.githubusercontent.com/ninghao/xb2-node/master/assets/images/screenshot-tableplus.png)
+
 ### 3：复制上传文件
 
 在 xb2-node-assets 项目里，找到 _uploads_ 目录，把这个目录复制一份放到我们的 _xb2-node_ 这个项目的根目录下面。这个 _uploads_ 里面的东西就是上传的图片与用户头像的原始文件，以及它们的调整尺寸之后的文件。
@@ -65,6 +67,8 @@ PUBLIC_KEY=LS0tLS1CRUd
 测试应用接口的时候，可以使用 Insomnia 这个客户端软件。在测试的时候你需要创建一些对接口的请求，然后要做一些配置，比如请求的地址，请求里带的数据等等。
 
 打开 Insomnia 以后，点击 Create 按钮，在弹出的菜单里，Import from 的下面，选择 File，然后选择 xb2-node-assets 这个项目里的 _insomnia-workspace/xb2-node.yaml_ 这个文件，这样会为你创建好测试应用接口的时候需要的请求。
+
+![insomnia](https://raw.githubusercontent.com/ninghao/xb2-node/master/assets/images/screenshot-insomnia.png)
 
 ## bcrypt 与 bcryptjs
 
