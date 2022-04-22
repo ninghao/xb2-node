@@ -31,7 +31,7 @@ export const store = async (
     const data = await createFile({
       ...fileInfo,
       userId,
-      postId,
+      postId: parseInt(`${postId}`, 10),
       ...request.fileMetaData,
     });
 
