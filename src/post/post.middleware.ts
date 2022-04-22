@@ -59,7 +59,7 @@ export const filter = async (
     request.filter = {
       name: 'tagName',
       sql: 'tag.name = ?',
-      param: tag,
+      param: `${tag}`,
     };
   }
 
@@ -68,7 +68,7 @@ export const filter = async (
     request.filter = {
       name: 'userPublished',
       sql: 'user.id = ?',
-      param: user,
+      param: `${user}`,
     };
   }
 
@@ -77,7 +77,7 @@ export const filter = async (
     request.filter = {
       name: 'userLiked',
       sql: 'user_like_post.userId = ?',
-      param: user,
+      param: `${user}`,
     };
   }
 
@@ -97,7 +97,7 @@ export const paginate = (itemsPerPage: number) => {
     const limit = itemsPerPage || 30;
 
     // 计算出偏移量
-    const offset = limit * (page - 1);
+    const offset = limit * (parseInt(`${page}`, 10) - 1);
 
     // 设置请求中的分页
     request.pagination = { limit, offset };
