@@ -97,4 +97,8 @@ export const sqlFragment = {
     INNER JOIN file
       ON file.postId = post.id
   `,
+  leftJoinFile: `
+    LEFT JOIN file
+      ON file.postId = post.id
+  `,
 };
