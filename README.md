@@ -24,7 +24,7 @@ npm install
 APP_PORT=3000
 
 # 内容配置
-POSTS_LIMIT=30
+POSTS_PER_PAGE=30
 
 # 数据仓库配置
 MYSQL_HOST=localhost
