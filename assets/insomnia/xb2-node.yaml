@@ -1,0 +1,909 @@
+_type: export
+__export_format: 4
+__export_date: 2022-09-13T11:20:01.434Z
+__export_source: insomnia.desktop.app:v2022.5.1
+resources:
+  - _id: req_25fec5a25d5548f9a3ee415a155d72ce
+    parentId: fld_e7822476b5d642b1a369a31b4fd4fe6e
+    modified: 1588042192277
+    created: 1588042092341
+    url: "{{ xb2_node_api  }}/comments/1/replies"
+    name: 回复列表
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1588042092341
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_e7822476b5d642b1a369a31b4fd4fe6e
+    parentId: wrk_0509b6eb39944598a84f360f53532bcd
+    modified: 1586427625942
+    created: 1586427625942
+    name: 评论
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1586427625942
+    _type: request_group
+  - _id: wrk_0509b6eb39944598a84f360f53532bcd
+    parentId: null
+    modified: 1584415741799
+    created: 1584415741799
+    name: xb2-node
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_7d455809c509402dbc39dc3401ef4d44
+    parentId: fld_e7822476b5d642b1a369a31b4fd4fe6e
+    modified: 1587956859345
+    created: 1587789595982
+    url: "{{ xb2_node_api  }}/comments?post=1"
+    name: 评论列表
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1587789595982
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4f09eb0d3bc645ada054d770a81c4661
+    parentId: fld_e7822476b5d642b1a369a31b4fd4fe6e
+    modified: 1586427789590
+    created: 1586427633913
+    url: "{{ xb2_node_api  }}/comments"
+    name: 发表评论
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"content": "精妙绝伦 ~",
+        	"postId": 3
+        }
+    parameters: []
+    headers:
+      - id: pair_d1a8bdca53e04e2dac5ae45eb3c1774e
+        name: Content-Type
+        value: application/json
+    authentication:
+      token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6IuadnOeUqyIsImlhdCI6MTU4NjQyNzYxM30.Df9pDIZieK8-SjXoKX4rCiI1_YKXgzMVgX6JNxDZvoGboP8kxkhZ3Rn-AV-LUgfisCjtAFHhbCTPpkNHa_QnoJTjGmvQGg5D4Jj0yngJn-gjmPnC1HbZBH_kd1fmaAxChDJndnjPojBILKD8R3JsMPlW7Pe8NFdy3lpRWnnjsuYqKMKxgoITC1DXoGUiRwTF6k4UPQrsrJqolkgO5fHRta_IIShjVLy_nU3qF4XTC_Q4v-2zad8yzdhqKVuigsRfdG9ih7u0lHdaFexl4UcfLS4HmnRXpkWjP-sK_eLM7u12-VB67VPkF10Jtp4e68Vn8N0xVI__sAQ_d1cFuSiSbIkqhcr72Gux1GYC7T1nMPRgcXWZiaPO3C80bLtwfQJBoWGmyn_ccuiVa_EBMI8GaG-ePMPNucMd0VZEPnbk9ST8DK5oEem-gRCMG1Y3ST3qpBBCDdzVBQtyl-kI2gEJcPxTCcxceZu7rInEhhWJyxmw8_110MDGedohULraN1amIKq9YeMxHyZs3LofYR8k9brPd35z-XdKnbs7WmNG0RzFPmvcGiGd0cb0Qnzaa1HWEqpA8IeHMOhyQZskB3bexvu1nOZ0ibkiMm1qij8L4kBwTbC_nufigwvHsvTvmDVA7TryRlpBIcnF872ucxdsl3jz8LG4VhYUFlLLceqI3jo
+      type: bearer
+    metaSortKey: -1586427633913
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c7159fbd1dc144368fcde244e5454d70
+    parentId: fld_e7822476b5d642b1a369a31b4fd4fe6e
+    modified: 1586427876105
+    created: 1586427851741
+    url: "{{ xb2_node_api  }}/comments"
+    name: 发表评论<李白>
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"content": "才华盖世！",
+        	"postId": 2
+        }
+    parameters: []
+    headers:
+      - id: pair_d1a8bdca53e04e2dac5ae45eb3c1774e
+        name: Content-Type
+        value: application/json
+    authentication:
+      token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6IuadjueZvSIsImlhdCI6MTU4NjQyNzgyOH0.gvdRs5QkSgkXdjuiiVOKBEJBuw37-tPyp6iSVf4EOYfHUyXMahUA8XPO35NNIrWXBsLxofRgQJloGdEuxVikNMyZsXq8r58Av_-GktM7MzeNUqX_fqjuUEfLJU6a1-oIiV08ttFMbNCG1Q9NmxlQCrs1aZesrIZcrq3BautAZ4PtFhmm3puIdzP0djupGBon-rHqpRUEr2P3ju5NVSezeBEVAgazrTRwFR_PCXokFOTy_w4-q7E-iNiagFZ8ApcTd4RPsHVA2gGp8QL8QqAEQpC6NDwmqvp_iMmQ7q-bREMiZ80bePEbjWAJo4j8CfRBWR3E-2lAgDwt0mAvhc2BBK7F16y0-TSGM-0vNpqLIyfcZkPDsLoftPyWsSXXF0HX2goa4jHTxLWdYbAcXnvGaUVv_htkEtZDMWp3OWaVVFmZForC5ZpjGQlDZycNo_IAOwWE37rt8x-AKF26k6OT0q3fTNNmKYCqEIchUcUhdSfCW8nsYSCUSGkSqn1KY5xibHki3BGk6x1d5zwbYJo5XXap46BagLJfLL2ZoDzlNw7QsRJIip96O7izPVC1zX0hITbTJbxQOcwSS5ul6AUFQqgTFqWzuHj0aNfiC3kdbmtrJtttOOrmypDaDAR2sWREakbBlCvnx0unRm8QfqOOnD-QmxwbKPpoq162EPq9Yo4
+      type: bearer
+    metaSortKey: -1586381343260
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4c5fabd271f04a2ab304466c793dfad4
+    parentId: fld_e7822476b5d642b1a369a31b4fd4fe6e
+    modified: 1586428535541
+    created: 1586428468633
+    url: "{{ xb2_node_api  }}/comments/4/reply"
+    name: 回复评论<李白>
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"content": "谢谢 😁",
+        	"postId": 1
+        }
+    parameters: []
+    headers:
+      - id: pair_d1a8bdca53e04e2dac5ae45eb3c1774e
+        name: Content-Type
+        value: application/json
+    authentication:
+      token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6IuadjueZvSIsImlhdCI6MTU4NjQyNzgyOH0.gvdRs5QkSgkXdjuiiVOKBEJBuw37-tPyp6iSVf4EOYfHUyXMahUA8XPO35NNIrWXBsLxofRgQJloGdEuxVikNMyZsXq8r58Av_-GktM7MzeNUqX_fqjuUEfLJU6a1-oIiV08ttFMbNCG1Q9NmxlQCrs1aZesrIZcrq3BautAZ4PtFhmm3puIdzP0djupGBon-rHqpRUEr2P3ju5NVSezeBEVAgazrTRwFR_PCXokFOTy_w4-q7E-iNiagFZ8ApcTd4RPsHVA2gGp8QL8QqAEQpC6NDwmqvp_iMmQ7q-bREMiZ80bePEbjWAJo4j8CfRBWR3E-2lAgDwt0mAvhc2BBK7F16y0-TSGM-0vNpqLIyfcZkPDsLoftPyWsSXXF0HX2goa4jHTxLWdYbAcXnvGaUVv_htkEtZDMWp3OWaVVFmZForC5ZpjGQlDZycNo_IAOwWE37rt8x-AKF26k6OT0q3fTNNmKYCqEIchUcUhdSfCW8nsYSCUSGkSqn1KY5xibHki3BGk6x1d5zwbYJo5XXap46BagLJfLL2ZoDzlNw7QsRJIip96O7izPVC1zX0hITbTJbxQOcwSS5ul6AUFQqgTFqWzuHj0aNfiC3kdbmtrJtttOOrmypDaDAR2sWREakbBlCvnx0unRm8QfqOOnD-QmxwbKPpoq162EPq9Yo4
+      type: bearer
+    metaSortKey: -1586358197933.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b0270f29a1514109a996797f862c2d17
+    parentId: fld_e7822476b5d642b1a369a31b4fd4fe6e
+    modified: 1586429033544
+    created: 1586429005434
+    url: "{{ xb2_node_api  }}/comments/4"
+    name: 修改评论<李白>
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"content": "谢谢 ~"
+        }
+    parameters: []
+    headers:
+      - id: pair_d1a8bdca53e04e2dac5ae45eb3c1774e
+        name: Content-Type
+        value: application/json
+    authentication:
+      token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6IuadjueZvSIsImlhdCI6MTU4NjQyNzgyOH0.gvdRs5QkSgkXdjuiiVOKBEJBuw37-tPyp6iSVf4EOYfHUyXMahUA8XPO35NNIrWXBsLxofRgQJloGdEuxVikNMyZsXq8r58Av_-GktM7MzeNUqX_fqjuUEfLJU6a1-oIiV08ttFMbNCG1Q9NmxlQCrs1aZesrIZcrq3BautAZ4PtFhmm3puIdzP0djupGBon-rHqpRUEr2P3ju5NVSezeBEVAgazrTRwFR_PCXokFOTy_w4-q7E-iNiagFZ8ApcTd4RPsHVA2gGp8QL8QqAEQpC6NDwmqvp_iMmQ7q-bREMiZ80bePEbjWAJo4j8CfRBWR3E-2lAgDwt0mAvhc2BBK7F16y0-TSGM-0vNpqLIyfcZkPDsLoftPyWsSXXF0HX2goa4jHTxLWdYbAcXnvGaUVv_htkEtZDMWp3OWaVVFmZForC5ZpjGQlDZycNo_IAOwWE37rt8x-AKF26k6OT0q3fTNNmKYCqEIchUcUhdSfCW8nsYSCUSGkSqn1KY5xibHki3BGk6x1d5zwbYJo5XXap46BagLJfLL2ZoDzlNw7QsRJIip96O7izPVC1zX0hITbTJbxQOcwSS5ul6AUFQqgTFqWzuHj0aNfiC3kdbmtrJtttOOrmypDaDAR2sWREakbBlCvnx0unRm8QfqOOnD-QmxwbKPpoq162EPq9Yo4
+      type: bearer
+    metaSortKey: -1586346625270.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f0e31cbcf927456b82cb5b0d961adfba
+    parentId: fld_e7822476b5d642b1a369a31b4fd4fe6e
+    modified: 1586429431932
+    created: 1586429416041
+    url: "{{ xb2_node_api  }}/comments/4"
+    name: 删除评论<李白>
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6IuadjueZvSIsImlhdCI6MTU4NjQyNzgyOH0.gvdRs5QkSgkXdjuiiVOKBEJBuw37-tPyp6iSVf4EOYfHUyXMahUA8XPO35NNIrWXBsLxofRgQJloGdEuxVikNMyZsXq8r58Av_-GktM7MzeNUqX_fqjuUEfLJU6a1-oIiV08ttFMbNCG1Q9NmxlQCrs1aZesrIZcrq3BautAZ4PtFhmm3puIdzP0djupGBon-rHqpRUEr2P3ju5NVSezeBEVAgazrTRwFR_PCXokFOTy_w4-q7E-iNiagFZ8ApcTd4RPsHVA2gGp8QL8QqAEQpC6NDwmqvp_iMmQ7q-bREMiZ80bePEbjWAJo4j8CfRBWR3E-2lAgDwt0mAvhc2BBK7F16y0-TSGM-0vNpqLIyfcZkPDsLoftPyWsSXXF0HX2goa4jHTxLWdYbAcXnvGaUVv_htkEtZDMWp3OWaVVFmZForC5ZpjGQlDZycNo_IAOwWE37rt8x-AKF26k6OT0q3fTNNmKYCqEIchUcUhdSfCW8nsYSCUSGkSqn1KY5xibHki3BGk6x1d5zwbYJo5XXap46BagLJfLL2ZoDzlNw7QsRJIip96O7izPVC1zX0hITbTJbxQOcwSS5ul6AUFQqgTFqWzuHj0aNfiC3kdbmtrJtttOOrmypDaDAR2sWREakbBlCvnx0unRm8QfqOOnD-QmxwbKPpoq162EPq9Yo4
+      type: bearer
+    metaSortKey: -1586340838938.625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ad143ae3b74a4faf9a9f55539c1b9b9f
+    parentId: fld_5e38c15f49834ce885704e0ce994ad6d
+    modified: 1586335075834
+    created: 1586335052607
+    url: "{{ xb2_node_api  }}/posts/3/tag"
+    name: 移除内容标签
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"tagId": 2
+        }
+    parameters: []
+    headers:
+      - id: pair_cd1aab0d949d4474a84fb14f08a2423e
+        name: Content-Type
+        value: application/json
+    authentication:
+      token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IueZveWxheaYkyIsImlhdCI6MTU4NjMzNTAzMn0.iDhYQCIpxA1B4eSerZxsTfDEihMYrMzCutfXSOAZlVyKnl5kP3RP7Ro36LUaNYcdOAyi77yGWn2R9tz4bNHYJC86mjkPQmPy3enV7k8T8mNHnasDQjC9ee8edmBOXtMZusD-Q7AWyuGmYjJPB8s3T4CkzygVCaA5yvZcOpy3VMXth0qI2ihqjAOzIRHwzDUG-kM8z-KX6rcP9sV16NGwYPdZkAI83CecAoCaAoThOdwt-uUeMjRn97mDWRHwzu8e3U45_n1pDQOlZyNUzputQDZ-JBiHz0GCoYZ9mjhzLQqewQSPKGhtNTfndDYaZYVjfgJI8Qwa_twsAxQZxzqRB7sUnMrDGu6yW6jic6dollrKOVnUiqokWkLmLIpvcw_tT1XoD_xfq-yRzOZqsiV2UwDa1JLNs0MOqefeH5Fet_uVyW-ncSNabc6scMikMNz2S8LH6cDa5_8StSNUKnr0plUlWhFt2Rk75gMBXvAZdRTAvBUpoinlHqW8Qo1nUq3W_bwDnRekmvXAhV4j6ZhTYvPUEPzsxxH9CtqYeTcTPMs8UPYwpJK6CgveyqZbrCK9GRTMxhlNwEtVmCezzibXjWLtH1KqWkUPguKio4PDi-5JrLs1N8Aei2zwMTsIy9ssYRraL3lwmsN8XyQeHjxL0Fz5i70MYWme2z4VXz-ZDWs
+      type: bearer
+    metaSortKey: -1586335052607
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_5e38c15f49834ce885704e0ce994ad6d
+    parentId: wrk_0509b6eb39944598a84f360f53532bcd
+    modified: 1586331700067
+    created: 1586331700067
+    name: 标签
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1586331700067
+    _type: request_group
+  - _id: req_f53cd2f2a9bb4ad89a445ed8544af94b
+    parentId: fld_5e38c15f49834ce885704e0ce994ad6d
+    modified: 1586334122578
+    created: 1586333994509
+    url: "{{ xb2_node_api  }}/posts/3/tag"
+    name: 添加内容标签
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "日落"
+        }
+    parameters: []
+    headers:
+      - id: pair_8d92661ec1664c689194a30d8c79c4aa
+        name: Content-Type
+        value: application/json
+    authentication:
+      token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IueZveWxheaYkyIsImlhdCI6MTU4NjMzNDA2OX0.HNFYMYYkU596lYppfnX-0Mo7jrRD07YKjnNXmwiE7vcmngDuXOU-eAokHpEbKIfTd6eXU7YAcFU-0ea5GU239pBVZV76sCfgqdn2RnB7xM9L0Wc1pG57oW_hXV91nTEjdcCo79BGdVdWQg8p4D2b7UJfiQo-hMaxYTn6vDEoOsjRJXZCrnbnKvEL4bLYbb2heb1GtDFsErH0cyxrVnFMEQGslREHyqqtnBJ13cy0ttJBd_mdJtYzZtfbLgC0E3s6MR8r9gKOWHbKOInCTAhwY82o5mci_YSm5YWPlmemZZScnX7zrUDkrhpPAo7ANkg6CKxhChiIgtxHRUppjvsoEhgWWfUzl6_Ef84TJrmD3wfqtt9FQOR6h0Iiv35x2MOiRUmtFlIfziKPirt4NR8KyMX-nIOQkQEpyUkkeKGkYziSfIMD3Qw6fI3jzRGpZ7L-j56v-HKfC_3GE95dS2QGObLjBnT4-ZGlXUAAFadOF4GBq5IGkIz-WuO3q2IvRc7TOOH93oqcVbCO36-kwhC6wHo7HrY35z_xNrv9zDMZXx5q_TdQYB-oUBLmW9-71OBmR-UGfVlVoUs1rImvqm6EZLrsZBDd0eSSvZqNuCM-bx38gPiGPhYvLXopRe_66jfwv-tV_iFfMaCuF0wSTzE7VyfVcPuiIVK3V0fdDbWE_qc
+      type: bearer
+    metaSortKey: -1586333994509
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d73568f9fb2e4298ba9ec31e6185b62f
+    parentId: fld_5e38c15f49834ce885704e0ce994ad6d
+    modified: 1586331737290
+    created: 1586331708002
+    url: "{{ xb2_node_api  }}/tags"
+    name: 创建标签
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "秋天"
+        }
+    parameters: []
+    headers:
+      - id: pair_fe87840760994768aca46fa1c6148ddd
+        name: Content-Type
+        value: application/json
+    authentication:
+      token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IueZveWxheaYkyIsImlhdCI6MTU4NjMzMTY3N30.fVXo81Tsw2dhtaIj8RHQaTTZ9yP1ZOVXM2oK8yr5JFiZ5ucq1fe7IoK6pBn_5HjcuFZv3nRO9rK9ID5R9vL6S40fq25igqGAVTsfxzcj0l9R2eS1X7Q02FqXePAWn1Bhr8OWcUl333nA_vaGgzNDGEx2nsIgJ2GUToL-81Hchq3-8-H2XdsoAKfoQDz05TTRHdci1jnorvXRYikrilT0iYCzMmVoOztTLl-AqHcg6EGFSFF82Qw2pFKV5QzU0ccaY7I8b9ya26wO9XScDqt-ZG4R0Kr1PPb-Ddz70ByFXU3d9Ugwtw5kW7bYaUzIZty9z1DCkx-UQ-GeinMu5bJ5xXe5aLPT4nAa0Bz8UIfh4d5h2_RxgEcb6A3tre3M_rZcaYN7VckW0ikYSq2iu5uT0RuemzGiMqVrAfEZFJGU0zY2l9bSoZXgkocHQ7Gz1GsoorgTjC8-YOC3WqHz2QLx4GYUYkTXcRSBjl4sH-Y_FqCoh_jizwMZdxtB0d5uEJlMsBzoA2V56QiwFAO3Nh3ZQHM0NpBUYzQ7rnQ6p6VsdlnlpTqrxCcHK-IGYDDrW_98Fb8DeADi87XW7ku-Ek7pLb61zv_l1be2O1NszfeKEBFvyldBF-gTTPbGEG8-u6icIHCkaWoCQ3x4C0ZtxOEAot2E31-050W5xD7W5m2ZllQ
+      type: bearer
+    metaSortKey: -1586331708002
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_110f94cb6d264866aa35e4b39153ca16
+    parentId: fld_95f2486d86674f4ea46adad7621b833f
+    modified: 1588865133074
+    created: 1586142051942
+    url: "{{ xb2_node_api  }}/files/1/metadata"
+    name: 文件信息
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1586142051942
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_95f2486d86674f4ea46adad7621b833f
+    parentId: wrk_0509b6eb39944598a84f360f53532bcd
+    modified: 1585902973273
+    created: 1585902973273
+    name: 文件
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1585902973273
+    _type: request_group
+  - _id: req_1aa857eae1d948de90db7662f62c2a5f
+    parentId: fld_95f2486d86674f4ea46adad7621b833f
+    modified: 1588865115747
+    created: 1585905133893
+    url: "{{ xb2_node_api  }}/files/1/serve?size=large"
+    name: 文件服务
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1585905133893
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e1b755d3d8d34cfdab7853c2af8f469f
+    parentId: fld_95f2486d86674f4ea46adad7621b833f
+    modified: 1588864974025
+    created: 1585902983623
+    url: "{{ xb2_node_api  }}/files?post=1"
+    name: 上传文件
+    description: ""
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - description: ""
+          fileName: /Users/wanghao/Desktop/DSCF2797.jpg
+          id: pair_d2d7b6ff793b4897bf95e8d6cb612ddb
+          name: file
+          type: file
+          value: ""
+    parameters: []
+    headers:
+      - id: pair_54222f31e7d94f928e8fea34a94c1324
+        name: Content-Type
+        value: multipart/form-data
+    authentication:
+      token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6IuadjueZvSIsImlhdCI6MTU4ODg2NDk1OX0.Oh2LnzZSQAcjKM4Odj6Wzk0t86B4eBaOCsYmgvmyqFmtIbVtbQ927PPJNc0eH055EWcqjeOPHWMd7GDj80hTeymBTOjIzKFDOSytp-G8fZmmZmqog5Qx9TnrZ_Uy6gBKS1RWrR8klnyvs4YYIHoDYMfoaipc--48ZKbTssc3-IyAAjrb_HNhxvr1d7-5YTaGF5Y-0erKMkk40-3-UUF-X7Pif_LIR3cZ6WnB05hsGov_g_-BDVgIIQRRHItStheKVzlEABDixCL2YyuDP_JVtfD4AUmiJVNvyh1dI6flh8YUFLVjqVl5D62lr7dVwrYOyDiuhNMZAmetoWKpVZZQfq4Edhgkgs1aFl6xyK-mMHoTxZ1VZNmzljTw2B1oFlIbepceLg8ePLdbiNi_-i_HAaq5Vql9qwbPTA0eOoYBCZ8U8kgbB0V_QX3uP5rN29YgdOhg4bOxFJx_zge4MDvdqJWK_RaRL-k0N40Q-iRFJC8UabE5hjVG9TzBcYKJ1M6Rgqv4L6Pzjll-xWZolrOvl2-nctQGqbGzXjQq-M0JEVNb_FsS1CAqIdUEOhhyw5s4C4fw9xWsK_x9TdRPkYMwYlWWPcRjcJ7Bt-VPfsIPdK01a5-WwhgxrfvKv3hg3M62fbXfPbJPXUDszgYs9vr3LMJaHOsz4zSgNdgrC7efnE0
+      type: bearer
+    metaSortKey: -1585902983624
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_dff397685eb0416fac65cae524959d50
+    parentId: fld_0ece9e241f704f99a604883a2f1eb454
+    modified: 1588561462394
+    created: 1588085356151
+    url: "{{ xb2_node_api  }}/users"
+    name: 更新用户
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"validate": {
+        		"password": "321321"
+        	},
+        	"update": {
+        		"password": "123123"
+        	}
+        }
+    parameters: []
+    headers:
+      - id: pair_06ea90732eae4053a7665bdd71b9c6d8
+        name: Content-Type
+        value: application/json
+    authentication:
+      token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IuW8oOS4iSIsImlhdCI6MTU4ODA4NTM2OX0.mipoBwUsuD4CPtvkVGvKBvfyZJjXvyHhYU4d3y6oSBbGcAfYEY6s-Tom7_9VQKAJM5ytY9BLC379MT56u4V8kXgSJ9j6dCd7cw--VmJmw2z7laQMJji1Z1vAF3faK8gN-fU2L4-9l2m3a2ErsTa8DD4lSkK8HkNUNSuanDbR5xBNnwE3GrEOts_wDF9E-2MbzB8cIBX9xZT0sX9OpXSUNob-Dbqxc44rYQ8WWd-cnIpSDYcSXQxwXyk6ThUGDz3GeOJXWMkMP2t4PlLaas8jzjFUIWuGfEi_FaIyoOnHeom0hjQQ5JNf7jVdfQKVXHHvp7A8lfPeusM0RVErM-ojhJWoC6G4LS84kI0_iiaG7xU2gaw9AzPszHYfoJ-BQYt4-Ya_9GiKj1SA-G4yQoV5llnQ2xWj4GPTwxzuNS7KoJx8NJQqLihWGJP-l6oCSXCg1ExeEo7XrnEXdDIVHM5K24VAEW8_y24EuVCjVqS7UqN8SzndGmAb_WFPODduUlbqkRat12KWww21a6j13CYk-RpeMN3fv_IuQQzpX5E_hqTKvFu3wMAX2ok9Luas9Ym4ukSefKd9T1c7re_TcNYZcNMcTIWdyAtV6o1k3Q7X7nEJ5mYxMEJh_oxRQ90RywGTbV_dglIzM9dvpdDM6QG_l93KDYZtz_owlQxAEVsHthQ
+      type: bearer
+    metaSortKey: -1588085356151
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_0ece9e241f704f99a604883a2f1eb454
+    parentId: wrk_0509b6eb39944598a84f360f53532bcd
+    modified: 1585202465967
+    created: 1585202465967
+    name: 用户
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1585202465968
+    _type: request_group
+  - _id: req_483b04a9659a4a6680e42dba7d740f90
+    parentId: fld_0ece9e241f704f99a604883a2f1eb454
+    modified: 1588561058764
+    created: 1588060885112
+    url: "{{ xb2_node_api  }}/users/30"
+    name: 用户帐户
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1588060885112
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_aed2c20816454e608afb34ed864ec8b5
+    parentId: fld_0ece9e241f704f99a604883a2f1eb454
+    modified: 1587538054258
+    created: 1587538018992
+    url: "{{ xb2_node_api  }}/posts/1/like"
+    name: 点赞内容
+    description: ""
+    method: POST
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IuW8oOS4iSIsImlhdCI6MTU4NzUzODA0MH0.a1h1xIBu6qxdX73RTmHwJzWuP0psz7rM6YLtEO4YD0dbEaQu1KfMyJ3kFT-8xqz3s7oTR3QYy7wAoJcx2QbKpnp4zpyzrpFju09V28XqcOFmV2fXfUkteewFYWqan_ArzaQVmhegYLMvslSVzim9wsHNOrFvHx2MFGfu7lTDtqZgoHfv-HSXpyDDf9Cggc00uEh28BtqrJyd6LyUWeiRoO-8OWfsMAkr7Fh4sW78InLLXt44QKKjLLSCspa6o5e7JQnyHFxN3zKXsYWzqwqp67g06B54oWSZz1HNNUWa2Hmh2HoobwLia2jgP4oTZx3EehWA1eBzBOVllWsFY1Vfb7SSqqL1Tr5_-vul2KxKaiVxX9mPu1A3U4KoCRedxdkcGwmiA8YeeB7z62tjKWl-VCDAIeosdfocccVaBrUWTKX1GOf39Vm1ipE7g6cM41nEH7pao7AFMNzkCubq1dOZuI-dPUrJmu8qaScVKAJRDiJvNx7Ezi_y_TDjV5KETpQEjxrq4elf1xsbpwULzWlgjcKXRWj1z3RQXaMtp-zo3PraYQCSHfHZvweKv-J6e6GfbM0Sg2rGfa1S9fDoxYLH-TrhR1MR0oUEEwe54rKVKXIALdpb5hJUdyeoggQmFdPSScQC4yveYasxhrKbpsjv_m-iX52CI8FnFxxxcJDUY6E
+      type: bearer
+    metaSortKey: -1587538018992
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_722aa1229ef24862a10d7eb11f085e49
+    parentId: fld_0ece9e241f704f99a604883a2f1eb454
+    modified: 1587539959249
+    created: 1587539956034
+    url: "{{ xb2_node_api  }}/posts/1/like"
+    name: 取消点赞内容
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IuW8oOS4iSIsImlhdCI6MTU4NzUzODA0MH0.a1h1xIBu6qxdX73RTmHwJzWuP0psz7rM6YLtEO4YD0dbEaQu1KfMyJ3kFT-8xqz3s7oTR3QYy7wAoJcx2QbKpnp4zpyzrpFju09V28XqcOFmV2fXfUkteewFYWqan_ArzaQVmhegYLMvslSVzim9wsHNOrFvHx2MFGfu7lTDtqZgoHfv-HSXpyDDf9Cggc00uEh28BtqrJyd6LyUWeiRoO-8OWfsMAkr7Fh4sW78InLLXt44QKKjLLSCspa6o5e7JQnyHFxN3zKXsYWzqwqp67g06B54oWSZz1HNNUWa2Hmh2HoobwLia2jgP4oTZx3EehWA1eBzBOVllWsFY1Vfb7SSqqL1Tr5_-vul2KxKaiVxX9mPu1A3U4KoCRedxdkcGwmiA8YeeB7z62tjKWl-VCDAIeosdfocccVaBrUWTKX1GOf39Vm1ipE7g6cM41nEH7pao7AFMNzkCubq1dOZuI-dPUrJmu8qaScVKAJRDiJvNx7Ezi_y_TDjV5KETpQEjxrq4elf1xsbpwULzWlgjcKXRWj1z3RQXaMtp-zo3PraYQCSHfHZvweKv-J6e6GfbM0Sg2rGfa1S9fDoxYLH-TrhR1MR0oUEEwe54rKVKXIALdpb5hJUdyeoggQmFdPSScQC4yveYasxhrKbpsjv_m-iX52CI8FnFxxxcJDUY6E
+      type: bearer
+    metaSortKey: -1587494304285.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_656ed39e4cec43e0b3c0bd49d9fcf2c1
+    parentId: fld_0ece9e241f704f99a604883a2f1eb454
+    modified: 1587450630298
+    created: 1587450589579
+    url: "{{ xb2_node_api  }}/users/3/avatar?size=small"
+    name: 头像服务
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1587450589579
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4e468bdac1514b4189b7a67064025e8a
+    parentId: fld_0ece9e241f704f99a604883a2f1eb454
+    modified: 1587448250622
+    created: 1587448182115
+    url: "{{ xb2_node_api  }}/avatar"
+    name: 上传头像
+    description: ""
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - description: ""
+          fileName: /Users/wanghao/Desktop/zhangsan.jpeg
+          id: pair_de8163ab83f246b2a888af05afdef980
+          name: avatar
+          type: file
+          value: ""
+    parameters: []
+    headers:
+      - id: pair_497a4bd39a5f4235a2783d5b2b310046
+        name: Content-Type
+        value: multipart/form-data
+    authentication:
+      token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IuW8oOS4iSIsImlhdCI6MTU4NzQ0ODIzN30.ti0-97Uwix0JQo6ktPqb9zMmIpMPgItH9FfeBhvSCohJBBmR2f34XyRYhnj94mszL42HDcyKtmdvnERf34trKLb12R9FOFBvqUVo4jHmIhttxuzXe_e34nviZ7CJ42Bvmf78GsaMyjxjZZHNPL6WfI_JlZ0Kun7XV0N6gUS3-fKbA8UN6NCL3HabDhnhEwbh72K_4eNhpszBJ-kKcbsxVrbujoexiO48HBZZHR_6QSQ_vJ_lHGJX1Re1zHrnHLbX_v7EiQJdX9RChb5Y43i5oQ8kVWSDUzHxJ4TAMQfaaRRK2ej7Z-NYoaSuWcLfeQv24gifUbpap_11ueu7NUmAieuUy_kXYOXXF6_CUXzUfRRecgfC6Q20EqCm3aF2Yy593tyOrg3g6iOqvgkRHbNt1Ee_PCg0Liv4lvlkl5o9PnnmTm2ddoLRbfMoQqkJQ8voKVQR2yhtUQPa8MGBqPaRvy7WkanJ8HHOj2BCvOCLh0dsorWCo1UtI6BoT9jCHH64nqpPJUAd7Sf7Y5-K9KAVq3fxxH4tSsaBp5dRYiog0lUGnny0szhMGd-fnhuRyLiH8M5bCYZY-qSx0sBRBB5Nw4qRrvOmAtqMWpAuvj_Qe5v8tLP9aIyxf4xDV0OmIs3fabWAFI6inIwascKGQVLsPPPorECt1Oxx1e90Qs8AQao
+      type: bearer
+    metaSortKey: -1587448182115
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_06bff9190b6147be8b3a0569f0c355a4
+    parentId: fld_0ece9e241f704f99a604883a2f1eb454
+    modified: 1585557377390
+    created: 1585557345746
+    url: "{{ xb2_node_api  }}/auth/validate"
+    name: 验证登录
+    description: ""
+    method: POST
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6IuadjueZvSIsImlhdCI6MTU4NTU1NjQ3Nn0.yYGPKTQ6Czt6ncvW8_TGWxTZ3Kz4MiQJLSFO_ECWQEAnjJP2Hus2VCJSFnfsMbzOzoBQbpUIzeUaKT5V98-S-7Ixxg1CVVIXqMd8aEApCQKZTnoyI_r3zFyDb3uu0sCYf102l-PjOx8J0weNx9FNHKu7WyryRJbBH_0DmFTAUFZLMmK1WeYIculLJmrc6ki9kjF6cyu6SdYEQJfSUUA4qOD4ftd3kofmW_xJDhbHdqqsy6S8a6onuIXjaPPTxhU1X0zWWmNMHs7bdVdvNFh_CwiFCQIbGKBL7YuSr9_xY5EWcTwkuL06aQ-9EtDjihybzlnHLxaIMyGY5TS5wCjhLpauhaF9V-d50AuiysR_E6DWo8mf-QjriMJYQ2S4AL9tyCqwA2BfkvvtT52S2VbI4SW-Yhx4FkUmkqQjwwKZIbvxJr3fQM7xmoXIKy1_usn9rwIn_bpz6RU0b194-fH_S0LTGU5bipbRI0HwRZZ7dveaTmIN5bjg7MJjB6DwgXEZnkhKOOnw9mjNTJGJrUiXPruUYOnFOsONdBd7JsWIfLUQRdyP28Hu4FuFX9BhLJUq1ESWL5kT3wtei2WH1Y9w4hNiEqqzIeLQII9bw5ujJgXgngQ73KTuaG6csnF8uS7f-N3Hlj21zaH-4NmB31G9NGNF5bzIUg_paeklW-J5yVQ
+      type: bearer
+    metaSortKey: -1585557345746
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cf40053440544ff0a7c398a6d72ef1c5
+    parentId: fld_0ece9e241f704f99a604883a2f1eb454
+    modified: 1588058462970
+    created: 1585287738982
+    url: "{{ xb2_node_api  }}/login"
+    name: 用户登录
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "张三",
+        	"password": "123123"
+        }
+    parameters: []
+    headers:
+      - id: pair_358856d921e64a96b34870b3aac7790d
+        name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1585287738982
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c536c95f4ab940858c0f0d8623b6dbe1
+    parentId: fld_0ece9e241f704f99a604883a2f1eb454
+    modified: 1586427825253
+    created: 1586427821223
+    url: "{{ xb2_node_api  }}/login"
+    name: 用户登录<李白>
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "李白",
+        	"password": "123123"
+        }
+    parameters: []
+    headers:
+      - id: pair_358856d921e64a96b34870b3aac7790d
+        name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1585266422827.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9d00e159f6ea43abb94bb0ba9149a25c
+    parentId: fld_0ece9e241f704f99a604883a2f1eb454
+    modified: 1586427611066
+    created: 1586427606076
+    url: "{{ xb2_node_api  }}/login"
+    name: 用户登录<杜甫>
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "杜甫",
+        	"password": "123123"
+        }
+    parameters: []
+    headers:
+      - id: pair_358856d921e64a96b34870b3aac7790d
+        name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1585245106672.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_88820b3d31464d31a290bc0eb18fc9a1
+    parentId: fld_0ece9e241f704f99a604883a2f1eb454
+    modified: 1588856163924
+    created: 1585202474363
+    url: "{{ xb2_node_api  }}/users"
+    name: 创建用户
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "李白",
+        	"password": "123123"
+        }
+    parameters: []
+    headers:
+      - id: pair_8f8c7df7a7b54e1e9940254bb1eb9904
+        name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1585202474363
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5c17c1f2a2464437930e4843d39ce797
+    parentId: fld_fc71879ddb1b4032bc85ed5bfa831ea8
+    modified: 1587701949317
+    created: 1587700305743
+    url: "{{ xb2_node_api  }}/posts/30"
+    name: 单个内容
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1587700305743
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_fc71879ddb1b4032bc85ed5bfa831ea8
+    parentId: wrk_0509b6eb39944598a84f360f53532bcd
+    modified: 1584415758855
+    created: 1584415758855
+    name: 内容
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1584415758855
+    _type: request_group
+  - _id: req_d6b52272dabc4d90ba0d30148009e840
+    parentId: fld_fc71879ddb1b4032bc85ed5bfa831ea8
+    modified: 1585122383412
+    created: 1585122369504
+    url: "{{ xb2_node_api  }}/posts/5"
+    name: 删除内容
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1585122369504
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6259f31cc7394945aa35b08db03b76f9
+    parentId: fld_fc71879ddb1b4032bc85ed5bfa831ea8
+    modified: 1585657628465
+    created: 1585121707068
+    url: "{{ xb2_node_api  }}/posts/6"
+    name: 更新内容
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "大雪"
+        }
+    parameters: []
+    headers:
+      - id: pair_3c7e23193b6e42b291ac2e55b3ca9122
+        name: Content-Type
+        value: application/json
+    authentication:
+      token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IueOi-eakyIsImlhdCI6MTU4NTY1NzYwNH0.yi9NJOQc4bOGoBy3bqbF0p1RyOufuYvrSbL5xXB-Xn8gstmJCiYH6PsL19_iBSjiKUghnVmpy2L4fJysxBmVNhR0dQL-urmFULa71O_q2FHWJD3XJ7clFuTeSLB-JX_dz5aTdeCneiTSHMFPX_Nuxr59LHTrrDAzwr1ekZRrZYBlP6xSzivG00HNuifiL_f4R_hEW61km_ZiUnfoNhRBOygLKKv0Z2cM9wfQBTzJa-glIp6e7E9GpdZQ5ZBcW918oggxPshBa6t_Nmzv86QZxzPwqwRVpYikfGlSMWeeCQMb-tGS9ocrQLbrzHd0sJLFgUpop9bRUyQoVHiBWJ3j9E7UUthip0LGTWp0s81Hd_jKcbIiF11jkyfqkJk_pT9b5OkIGdR0h3KII8JXloJa9nDXl3AE9elB3ckf5r532FYIkSHxS5c-EQSg3C9qHR21dFvEw_JeqCY3-yaT6yh-YRzFWm5GZEyIIYvC-_CIMS2jcsf3ZKm6M-tATBG-A6cAgxas2DVgrjVgsfqMTPrRf4P23yyB4_LPcc0Snn_oOfk0sEpE28VO3sVaL6YG36VAZnvDfJ35wWzHQ91LTs_Ar7n0D_7KgdJiWdcenc1M18MhwNerRA7lSKToj3yq8ufLtL398F1GbPJUCSBmpLeHETQ10FofsjUNSUMYHb-FnWU
+      type: bearer
+    metaSortKey: -1585121707068
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_22dced1ab11048f2b79c64eddcc5205d
+    parentId: fld_fc71879ddb1b4032bc85ed5bfa831ea8
+    modified: 1588856224842
+    created: 1585121033026
+    url: "{{ xb2_node_api  }}/posts"
+    name: 创建内容
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "title": "关山月",
+          "content": "明月出天山，苍茫云海间"
+        }
+    parameters: []
+    headers:
+      - id: pair_39a6796230e5463fad44bafe859ee930
+        name: Content-Type
+        value: application/json
+    authentication:
+      token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6IuadjueZvSIsImlhdCI6MTU4ODg1NjE3MH0.se31OhvnAD-8SrjDLihe3N6g-97lRfpfNYu2OTEGbEtwALUG8KAqesECEEPoXimsn7I8n2yQAwe-SCFdj-3ZgmvTkbaUT5XKUXURpFKnrt02AqzDreMDlAoqJvYJOKkPVllOKGCU14x2pOnTSm-m08uPECWQol5yHFjjkj1RM6-hqMbnv4drJIPLhhHvk8BjvDEE5fq2X6e8vSa11SzoUH-2C7eFrkao5EVA2S9oNmbDTg0DBxutvmFWisms2OvbsyFQW2_WEOnBPQTbvNkQnjYSIvmzE7Bp1JEX6SnNUAyX68_YNXtYYLmREZe0Cc6fP6ztkw52xH_1HOf4JqLHHxWJQBQu-VDoRh1DC-5bmPJsc3PpAjK5t0Q3xAT4EwN0rJH1JBBWdYrw9s1oH8tjXWNBAX3pTtTA_NMOmqyMH8fzmKs1FMNofSHEQUoepkHfPqys1hhQ86wB8J8Vr8EUKvkCgXXXzczda66f0wkzY3u_FDK4CREPJ8aB4DvpzLDsmrvEoudXJrE-Tu4qn8lg03y8PQYVwekOny63XA9xASxXEeEnJRTWul5Cf0hFvRUsSpqgVVwvHwkOAsLK43RoSAM9xbhFRpVaQYFRH3AFb5hdpuGdbYkolpnehuF-ihPCEVAb6k7JTO_VuJN4gBbIa8bVFGABD9rdDPW8Tp8TM1Y
+      type: bearer
+    metaSortKey: -1585121033026
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a6ae691fd7634cc79b98b1b45da6a75c
+    parentId: fld_fc71879ddb1b4032bc85ed5bfa831ea8
+    modified: 1588856260318
+    created: 1584415767514
+    url: "{{ xb2_node_api  }}/posts"
+    name: 内容列表
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_b675946a07fc4795bc803d8ea62cbe7e
+        name: authorization
+        value: SECRET
+    authentication: {}
+    metaSortKey: -1584415767514
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_689803abec37809703449356ecd4b0070225f9b3
+    parentId: wrk_0509b6eb39944598a84f360f53532bcd
+    modified: 1584415741839
+    created: 1584415741839
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1584415741839
+    _type: environment
+  - _id: jar_689803abec37809703449356ecd4b0070225f9b3
+    parentId: wrk_0509b6eb39944598a84f360f53532bcd
+    modified: 1584415741845
+    created: 1584415741845
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_c41842e6048c4a84aea7c35465349014
+    parentId: wrk_0509b6eb39944598a84f360f53532bcd
+    modified: 1594618330076
+    created: 1594618330076
+    fileName: xb2-node
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_7042fb342a53412695bedb9777711e72
+    parentId: env_689803abec37809703449356ecd4b0070225f9b3
+    modified: 1663067907514
+    created: 1584415890446
+    name: 开发环境
+    data:
+      xb2_node_api: http://localhost:3001
+    dataPropertyOrder:
+      "&":
+        - xb2_node_api
+    color: "#7d69cb"
+    isPrivate: false
+    metaSortKey: 1584415890446
+    _type: environment
+  - _id: env_09ebce3cc0ef42a09facda7dea2b06c0
+    parentId: env_689803abec37809703449356ecd4b0070225f9b3
+    modified: 1663067902972
+    created: 1584415932792
+    name: 生产环境
+    data:
+      xb2_node_api: http://localhost:3001
+    dataPropertyOrder:
+      "&":
+        - xb2_node_api
+    color: "#00cb15"
+    isPrivate: false
+    metaSortKey: 1584415932792
+    _type: environment
